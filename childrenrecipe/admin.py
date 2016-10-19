@@ -3,13 +3,16 @@ from .models import *
 
 # Register your models here.
 
+
 class MaterialInline(admin.TabularInline):
 	model = Material
 	extra = 1
 
+
 class ProcedureInline(admin.TabularInline):
 	model = Procedure
 	extra = 1
+
 
 class RecipeAdmin(admin.ModelAdmin):
 	filter_horizontal = ('tag',)
@@ -18,6 +21,7 @@ class RecipeAdmin(admin.ModelAdmin):
 		ProcedureInline,
 	]
 	list_display = ('id', 'name')
+
 
 #admin.site.register(Student)
 #admin.site.register(Classes)

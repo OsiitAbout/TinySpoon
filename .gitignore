@@ -1,1 +1,4 @@
 images/
+node_modules/
+*.pyc
+.idea/
